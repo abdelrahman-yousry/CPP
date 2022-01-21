@@ -23,7 +23,7 @@ struct complex
 /************* implementation of the constructor without input parameters **************/
 complex :: complex()
 {
-	real = image = 0 ;
+	real = imag = 0 ;
 	cout << "\n default constructor is calling";
 }
 /************* implementation of the constructor with one input parameters **************/
@@ -75,6 +75,9 @@ void complex :: print()
 		cout<<real<<" + "<<imag<<"i"<<end1;		  //printing real + imag if imag > 0
 	}
 }
+/*************** Functions prototype *****************/
+complex add (complex c1, complex c2);
+complex sub (complex c1, complex c2);
 
 void main (void)
 {
@@ -87,7 +90,6 @@ void main (void)
 	compResult.print();
 	compResult = sub(compNum1,compNum2);
 	compResult.print();
-	
 	getch();
 	return 0 ;
 	
